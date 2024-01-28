@@ -1,13 +1,13 @@
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs
 provider "google" {
-  project = "erfan-k8s-security"
+  project = "erf-security-project"
   region  = "us-central1"
 }
 
 # https://www.terraform.io/language/settings/backends/gcs
 terraform {
   backend "gcs" {
-    bucket = "erfan-tf-state-staging"
+    bucket = "erfan-tf-state-staging2"
     prefix = "terraform/state"
   }
   required_providers {

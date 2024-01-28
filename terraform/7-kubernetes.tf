@@ -29,7 +29,7 @@ resource "google_container_cluster" "primary" {
   }
 
   workload_identity_config {
-    workload_pool = "erfan-k8s-security.svc.id.goog"
+    workload_pool = "erf-security-project.svc.id.goog"
   }
 
   ip_allocation_policy {

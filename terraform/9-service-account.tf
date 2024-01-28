@@ -5,7 +5,7 @@ resource "google_service_account" "service-a" {
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam
 resource "google_project_iam_member" "service-a" {
-  project = "erfan-k8s-security"
+  project = "erf-security-project"
   role    = "roles/storage.admin"
   member  = "serviceAccount:${google_service_account.service-a.email}"
 }
@@ -14,5 +14,5 @@ resource "google_project_iam_member" "service-a" {
 resource "google_service_account_iam_member" "service-a" {
   service_account_id = google_service_account.service-a.id
   role               = "roles/iam.workloadIdentityUser"
-  member             = "serviceAccount:erfan-k8s-security.svc.id.goog[staging/service-a]"
+  member             = "serviceAccount:erf-security-project.svc.id.goog[staging/service-a]"
 }
