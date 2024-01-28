@@ -1,4 +1,3 @@
-```markdown
 # Create GKE Cluster with Terraform
 
 This guide outlines the steps to create a GKE (Google Kubernetes Engine) cluster using Terraform. It includes setting up infrastructure, deploying Nginx Ingress, and configuring DNS for ingress access.
