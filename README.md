@@ -18,8 +18,15 @@ Create a GCS bucket to store Terraform states and enable versioning.
 # Step 1: Create the bucket
 gsutil mb -p [PROJECT_ID] -l [LOCATION] gs://[BUCKET_NAME]/
 
+example:
+gsutil mb -p erfan-k8s-security -l us gs://erfan-tf-state-staging/
+
 # Step 2: Enable versioning on the bucket
 gsutil versioning set on gs://[BUCKET_NAME]/
+
+example:
+gsutil versioning set on gs://erfan-tf-state-staging/
+
 ```
 
 ### 2. Authenticate GCloud
